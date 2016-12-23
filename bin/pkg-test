@@ -1,6 +1,7 @@
 #!/usr/bin/env bash
 
-exec ava \
+bin=$(npm bin)
+
+exec $bin/../ava/cli.js \
   --source $npm_packages_testsPath \
-  --require babel-register \
   "$@"
