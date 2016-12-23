@@ -1,0 +1,47 @@
+{
+  "name": "@stayradiated/pkg",
+  "version": "1.0.0",
+  "description": "Utils for creating, building and testing NPM packages",
+  "main": "index.js",
+  "bin": {
+    "pkg-build": "./bin/pkg-build",
+    "pkg-build-css": "./bin/pkg-build-css.js",
+    "pkg-clean": "./bin/pkg-clean",
+    "pkg-coverage": "./bin/pkg-coverage",
+    "pkg-lint": "./bin/pkg-lint",
+    "pkg-test": "./bin/pkg-test",
+    "pkg-update-parents": "./bin/pkg-update-parents.js"
+  },
+  "scripts": {
+    "postpublish": "./bin/pkg-update-parents.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/stayradiated/pkg.git"
+  },
+  "author": "George Czabania <george@czabania.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/stayradiated/pkg/issues"
+  },
+  "homepage": "https://github.com/stayradiated/pkg#readme",
+  "dependencies": {
+    "ava": "^0.17.0",
+    "babel-cli": "^6.18.0",
+    "babel-preset-stayradiated": "^1.0.0",
+    "bluebird": "^3.4.7",
+    "child-process-promise": "^2.2.0",
+    "documentation": "^4.0.0-beta16",
+    "es6-promisify": "^5.0.0",
+    "eslint-config-stayradiated": "^1.0.0",
+    "npm-check-updates": "^2.8.9",
+    "nyc": "^10.0.0",
+    "postcss": "^5.2.6",
+    "postcss-advanced-variables": "^1.2.2",
+    "postcss-assets": "^4.1.0",
+    "postcss-math": "^0.0.5",
+    "postcss-nested": "^1.0.0",
+    "postcss-round-subpixels": "^1.2.0",
+    "recursive-readdir-filter": "^0.0.3"
+  }
+}

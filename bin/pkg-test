@@ -1,0 +1,6 @@
+#!/usr/bin/env bash
+
+exec ava \
+  --source $npm_packages_testsPath \
+  --require babel-register \
+  "$@"

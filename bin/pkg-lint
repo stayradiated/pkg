@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+
+bin=$(npm bin)
+
+exec eslint \
+  -c $bin/../@stayradiated/pkg/eslintrc \
+  "$@" \
+  $npm_package_srcPath $npm_package_testsPath

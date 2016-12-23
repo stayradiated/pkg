@@ -1,0 +1,15 @@
+#!/usr/bin/env bash
+
+bin=$(npm bin)
+
+$bin/pkg-clean
+
+if [ -d docs ]; then
+  echo + Building documentation
+  documentation build -f html -o ./docs $npm_package_srcPath
+fi
+
+echo + Building from "$npm_package_srcPath"
+echo + Writing to "$npm_package_buildPath"
+echo + Extra options: "$@"
+exec babel $npm_package_srcPath --out-dir $npm_package_buildPath "$@"
