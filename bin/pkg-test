@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
-bin=$(npm bin)
+NMDIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && cd .. && pwd )"
 
-exec $bin/../ava/cli.js \
+exec $NMDIR/ava/cli.js \
   --source $npm_packages_testsPath \
   "$@"

@@ -1,15 +1,15 @@
 #!/usr/bin/env bash
 
-bin=$(npm bin)
+NMDIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && cd .. && pwd )"
 
-$bin/pkg-clean
+$NMDIR/@stayradiated/pkg/bin/pkg-clean
 
 if [ -d docs ]; then
   echo + Building documentation
-  documentation build -f html -o ./docs $npm_package_srcPath
+  $NMDIR/documentation/bin/documentation.js build -f html -o ./docs $npm_package_srcPath
 fi
 
 echo + Building from "$npm_package_srcPath"
 echo + Writing to "$npm_package_buildPath"
 echo + Extra options: "$@"
-exec $bin/../babel-cli/bin/babel.js $npm_package_srcPath --out-dir $npm_package_buildPath "$@"
+exec $NMDIR/babel-cli/bin/babel.js $npm_package_srcPath --out-dir $npm_package_buildPath "$@"
