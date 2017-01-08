@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-NMDIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && cd .. && pwd )"
+NMDIR="$(cd "$(dirname "$(realpath "${BASH_SOURCE[0]}" )" )" && cd ../../.. && pwd)"
 
-$NMDIR/nyc/bin/nyc.js nyc $NMDIR/@stayradiated/pkg/bin/pkg-test
+$NMDIR/nyc/bin/nyc.js $NMDIR/@stayradiated/pkg/bin/pkg-test
 $NMDIR/nyc/bin/nyc.js report --reporter html
