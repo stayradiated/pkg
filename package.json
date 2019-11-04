@@ -41,7 +41,7 @@
     "mkdirp": "0.5.1",
     "pkg-conf": "3.1.0",
     "prettier": "1.18.2",
-    "read-pkg-up": "7.0.0",
+    "read-pkg-up": "6.0.0",
     "ts-node": "8.4.1",
     "typescript": "3.6.4",
     "unwire": "6.1.0"
