@@ -14,7 +14,7 @@ const execLinter = async (linterPath: string, args: string[]) => {
   }
 
   const files = args.length === 0 ? [`${SRC_PATH}`] : args
-  options.push('--ext', '.jsx', '--ext', '.js', '--ext', '.ts')
+  options.push('--ext', '.jsx', '--ext', '.js', '--ext', '.ts', '--ext', '.tsx')
 
   await exec('node', linterPath, ...options, ...files)
 }
