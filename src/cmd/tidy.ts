@@ -15,7 +15,7 @@ const prettier = async () => {
   const files =
     args.length > 0
       ? args
-      : [`./${SRC_PATH}/**/*.{js,jsx,css,scss,ts,md,yml,json,less}`]
+      : [`./${SRC_PATH}/**/*.{js,jsx,css,scss,ts,tsx,md,yml,json,less}`]
 
   await exec('node', PRETTIER_PATH, ...config, ...files)
 
