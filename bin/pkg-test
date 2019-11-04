@@ -1,7 +1,0 @@
-#!/usr/bin/env bash
-
-NMDIR="$(cd "$(dirname "$(realpath "${BASH_SOURCE[0]}" )" )" && cd ../../.. && pwd)"
-
-exec $NMDIR/ava/cli.js \
-  --source $npm_packages_testsPath \
-  "$@"

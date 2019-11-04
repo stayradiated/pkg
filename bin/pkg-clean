@@ -1,5 +1,0 @@
-#!/usr/bin/env bash
-
-echo + Wiping $npm_package_buildPath
-rm -rf $npm_package_buildPath
-mkdir -p $npm_package_buildPath

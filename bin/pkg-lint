@@ -1,8 +1,0 @@
-#!/usr/bin/env bash
-
-NMDIR="$(cd "$(dirname "$(realpath "${BASH_SOURCE[0]}" )" )" && cd ../../.. && pwd)"
-
-exec $NMDIR/eslint/bin/eslint.js \
-  -c $NMDIR/@stayradiated/pkg/eslintrc \
-  "$@" \
-  $npm_package_srcPath $npm_package_testsPath

@@ -2,18 +2,21 @@
   "name": "@stayradiated/pkg",
   "version": "2.0.0",
   "description": "Utils for creating, building and testing NPM packages",
-  "main": "index.js",
-  "bin": {
-    "pkg-build": "./bin/pkg-build",
-    "pkg-build-css": "./bin/pkg-build-css.js",
-    "pkg-clean": "./bin/pkg-clean",
-    "pkg-coverage": "./bin/pkg-coverage",
-    "pkg-lint": "./bin/pkg-lint",
-    "pkg-test": "./bin/pkg-test",
-    "pkg-update-parents": "./bin/pkg-update-parents.js"
-  },
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
   "scripts": {
-    "postpublish": "./bin/pkg-update-parents.js"
+    "build": "rm -rf ./dist && tsc",
+    "test": "npm run build && ava ./dist/**/*.spec.js",
+    "lint": "./bin/lint",
+    "tidy": "./bin/tidy"
+  },
+  "bin": {
+    "pkg-precommit": "./bin/precommit",
+    "pkg-build": "./bin/build",
+    "pkg-clean": "./bin/clean",
+    "pkg-lint": "./bin/lint",
+    "pkg-test": "./bin/test",
+    "pkg-tidy": "./bin/tidy"
   },
   "repository": {
     "type": "git",
@@ -26,22 +29,32 @@
   },
   "homepage": "https://github.com/stayradiated/pkg#readme",
   "dependencies": {
-    "ava": "^0.24.0",
-    "babel-cli": "^6.26.0",
-    "babel-preset-stayradiated": "^1.0.0",
-    "bluebird": "^3.5.1",
-    "child-process-promise": "^2.2.1",
-    "documentation": "^5.3.5",
-    "es6-promisify": "^5.0.0",
-    "eslint-config-stayradiated": "^1.5.0",
-    "npm-check-updates": "^2.14.0",
-    "nyc": "^11.4.1",
-    "postcss": "^6.0.14",
-    "postcss-advanced-variables": "^1.2.2",
-    "postcss-assets": "^5.0.0",
-    "postcss-math": "^0.0.8",
-    "postcss-nested": "^3.0.0",
-    "postcss-round-subpixels": "^1.2.0",
-    "recursive-readdir-filter": "^0.0.3"
+    "@mishguru/eslint-config": "5.9.1",
+    "@mishguru/eslint-typescript-config": "5.14.1",
+    "ava": "2.4.0",
+    "chalk": "2.4.2",
+    "eslint-utils": "1.4.3",
+    "file-exists": "5.0.1",
+    "globby": "10.0.1",
+    "husky": "3.0.9",
+    "lint-staged": "9.4.2",
+    "mkdirp": "0.5.1",
+    "pkg-conf": "3.1.0",
+    "prettier": "1.18.2",
+    "read-pkg-up": "7.0.0",
+    "ts-node": "8.4.1",
+    "typescript": "3.6.4",
+    "unwire": "6.1.0"
+  },
+  "devDependencies": {
+    "@types/mkdirp": "0.5.2",
+    "@types/node": "12.12.5",
+    "@types/pkg-conf": "3.0.0",
+    "@types/read-pkg-up": "6.0.0"
+  },
+  "release-it": {
+    "scripts": {
+      "beforeStart": "npm run build"
+    }
   }
 }
