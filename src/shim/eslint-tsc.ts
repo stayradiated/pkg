@@ -11,6 +11,8 @@ rewire([
       '@typescript-eslint/eslint-plugin',
       '@typescript-eslint/parser',
       'eslint-plugin-mishguru',
+      'eslint',
+      'typescript',
     ],
   ],
 ])
