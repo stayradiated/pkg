@@ -52,8 +52,8 @@
     "@types/read-pkg-up": "6.0.0"
   },
   "release-it": {
-    "scripts": {
-      "beforeStart": "npm run build"
+    "hooks": {
+      "after:bump": "npm run build"
     }
   }
 }
