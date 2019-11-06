@@ -29,11 +29,10 @@
   },
   "homepage": "https://github.com/stayradiated/pkg#readme",
   "dependencies": {
-    "@mishguru/eslint-config": "5.9.1",
-    "@mishguru/eslint-typescript-config": "5.14.1",
     "ava": "2.4.0",
     "chalk": "2.4.2",
-    "eslint-utils": "1.4.3",
+    "eslint": "6.6.0",
+    "eslint-config-stayradiated": "2.0.0",
     "file-exists": "5.0.1",
     "globby": "10.0.1",
     "husky": "3.0.9",
@@ -43,12 +42,12 @@
     "prettier": "1.18.2",
     "read-pkg-up": "6.0.0",
     "ts-node": "8.4.1",
-    "typescript": "3.6.4",
+    "typescript": "3.7.2",
     "unwire": "6.1.0"
   },
   "devDependencies": {
     "@types/mkdirp": "0.5.2",
-    "@types/node": "12.12.5",
+    "@types/node": "12.12.6",
     "@types/pkg-conf": "3.0.0",
     "@types/read-pkg-up": "6.0.0"
   },

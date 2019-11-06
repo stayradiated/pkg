@@ -9,7 +9,7 @@ Module._findPath = (...args: string[]) => {
   if (REWIRE_FINDPATH.has(path)) {
     return REWIRE_FINDPATH.get(path)
   }
-  return findPath(...args)
+  return findPath.apply(Module, args)
 }
 
 const REWIRE_LOAD = new Map()
@@ -19,7 +19,7 @@ Module._load = (...args: string[]) => {
   if (REWIRE_LOAD.has(path)) {
     return REWIRE_LOAD.get(path)
   }
-  return load(...args)
+  return load.apply(Module, args)
 }
 
 type PathTree = [string, PathTreeArray]

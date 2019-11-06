@@ -14,7 +14,18 @@ const execLinter = async (linterPath: string, args: string[]) => {
   }
 
   const files = args.length === 0 ? [`${SRC_PATH}`] : args
-  options.push('--ext', '.jsx', '--ext', '.js', '--ext', '.ts', '--ext', '.tsx')
+  options.push(
+    '--ext',
+    '.jsx',
+    '--ext',
+    '.js',
+    '--ext',
+    '.ts',
+    '--ext',
+    '.tsx',
+    '--config',
+    require.resolve('eslint-config-stayradiated'),
+  )
 
   await exec('node', linterPath, ...options, ...files)
 }
