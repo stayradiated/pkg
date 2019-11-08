@@ -30,7 +30,7 @@ const createTSConfig = (): string => {
       moduleResolution: 'node',
       noImplicitAny: true,
       noUnusedLocals: false,
-      noUnusedParameters: true,
+      noUnusedParameters: false,
       outDir: DIST_PATH,
       paths,
       removeComments: true,
