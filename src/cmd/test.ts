@@ -11,11 +11,16 @@ const test = async () => {
   let avaPath = AVA_TSC_PATH
 
   const args = process.argv.slice(2)
+
   const fileArgs = args.filter((arg) => arg.startsWith('-') === false)
+
+  const shouldBuild = (args.includes('--pkg-skip-build') === false)
 
   if (fileArgs.length === 0) {
     process.argv = []
-    await build()
+    if (shouldBuild) {
+      await build()
+    }
     avaPath = AVA_PLAIN_PATH
   }
 
