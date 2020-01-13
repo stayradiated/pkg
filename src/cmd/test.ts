@@ -14,7 +14,7 @@ const test = async () => {
 
   const fileArgs = args.filter((arg) => arg.startsWith('-') === false)
 
-  const shouldBuild = (args.includes('--pkg-skip-build') === false)
+  const shouldBuild = args.includes('--pkg-skip-build') === false
 
   if (fileArgs.length === 0) {
     process.argv = []

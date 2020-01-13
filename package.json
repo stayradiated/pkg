@@ -13,6 +13,7 @@
   "bin": {
     "pkg-precommit": "./bin/precommit",
     "pkg-build": "./bin/build",
+    "pkg-docs": "./bin/docs",
     "pkg-clean": "./bin/clean",
     "pkg-lint": "./bin/lint",
     "pkg-test": "./bin/test",
@@ -35,25 +36,21 @@
     "eslint-config-stayradiated": "2.0.0",
     "file-exists": "5.0.1",
     "globby": "11.0.0",
-    "husky": "4.0.1",
+    "husky": "4.0.7",
     "lint-staged": "9.5.0",
     "mkdirp": "0.5.1",
     "pkg-conf": "3.1.0",
     "prettier": "1.19.1",
     "read-pkg-up": "7.0.1",
-    "ts-node": "8.5.4",
+    "ts-node": "8.6.2",
+    "typedoc": "0.16.2",
     "typescript": "3.7.4",
     "unwire": "6.1.0"
   },
   "devDependencies": {
     "@types/mkdirp": "0.5.2",
-    "@types/node": "13.1.5",
+    "@types/node": "13.1.6",
     "@types/pkg-conf": "3.0.0",
     "@types/read-pkg-up": "6.0.0"
-  },
-  "release-it": {
-    "hooks": {
-      "after:bump": "npm run build"
-    }
   }
 }
