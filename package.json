@@ -44,6 +44,7 @@
     "read-pkg-up": "7.0.1",
     "ts-node": "8.6.2",
     "typedoc": "0.16.2",
+    "typedoc-plugin-internal-external": "2.0.2",
     "typescript": "3.7.4",
     "unwire": "6.1.0"
   },
