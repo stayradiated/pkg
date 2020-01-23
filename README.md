@@ -1,5 +1,7 @@
 ![PKG](./PKG.png)
 
+> My scripts for writing typescript code.
+
 ## Installation
 
 ```
