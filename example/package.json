@@ -1,7 +1,8 @@
 {
-  "name": "@mishguru/package-example",
+  "name": "@stayradiated/pkg-example",
+  "private": true,
   "version": "1.0.0",
-  "description": "Example project to test out @mishguru/package",
+  "description": "Example project to test out @stayradiated/pkg",
   "main": "./dist/index.js",
   "types": "./dist/index.d.ts",
   "scripts": {
