@@ -30,7 +30,7 @@
   },
   "homepage": "https://github.com/stayradiated/pkg#readme",
   "dependencies": {
-    "ava": "3.0.0",
+    "ava": "2.4.0",
     "chalk": "3.0.0",
     "eslint": "6.8.0",
     "eslint-config-stayradiated": "2.0.0",
