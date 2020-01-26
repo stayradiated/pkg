@@ -23,7 +23,7 @@ Module._load = (...args: string[]) => {
 }
 
 type PathTree = [string, PathTreeArray]
-interface PathTreeArray extends Array<string | PathTree> {}
+type PathTreeArray = Array<string | PathTree>
 
 const rewireChildren = (
   context: string,
