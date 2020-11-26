@@ -33,6 +33,7 @@
     "@ava/typescript": "1.1.1",
     "ava": "3.6.0",
     "chalk": "4.0.0",
+    "deep-extend": "0.6.0",
     "eslint": "6.8.0",
     "eslint-config-stayradiated": "2.1.0",
     "file-exists": "5.0.1",
@@ -49,6 +50,7 @@
     "unwire": "6.1.0"
   },
   "devDependencies": {
+    "@types/deep-extend": "0.4.31",
     "@types/mkdirp": "1.0.0",
     "@types/node": "13.11.1",
     "@types/pkg-conf": "3.0.0",
