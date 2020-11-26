@@ -1,5 +1,6 @@
 import globby from 'globby'
 import { join } from 'path'
+import pkgConf from 'pkg-conf'
 
 import { SRC_PATH, DIST_PATH } from '../shared/constants'
 
@@ -17,6 +18,8 @@ const createTSConfig = (): string => {
     const moduleName = filepath.replace(/\.d\.ts$/, '')
     paths[moduleName] = [join(D_TS_PATH, filepath)]
   }
+
+  const userConfig = pkgConf.sync('pkg') as any
 
   const config = {
     compilerOptions: {
@@ -39,8 +42,10 @@ const createTSConfig = (): string => {
       strict: false, // we should turn this on when data is ready :/
       target: 'es2018',
       lib: ['es2019', 'DOM', 'DOM.Iterable'],
+      ...(userConfig?.tsconfig?.compilerOptions ?? {}),
     },
     include: [`${SRC_PATH}/**/*`],
+    ...(userConfig?.tsconfig ?? {}),
   }
 
   const configString = JSON.stringify(config, null, 2)
