@@ -22,30 +22,33 @@ const createTSConfig = (): string => {
 
   const userConfig = pkgConf.sync('pkg')
 
-  const config = deepExtend({
-    compilerOptions: {
-      baseUrl: '.',
-      declaration: true,
-      diagnostics: true,
-      esModuleInterop: true,
-      forceConsistentCasingInFileNames: true,
-      incremental: true,
-      module: 'commonjs',
-      moduleResolution: 'node',
-      noImplicitAny: true,
-      noUnusedLocals: false,
-      noUnusedParameters: false,
-      outDir: DIST_PATH,
-      paths,
-      removeComments: true,
-      resolveJsonModule: true,
-      sourceMap: true,
-      strict: false, // we should turn this on when data is ready :/
-      target: 'es2018',
-      lib: ['es2019', 'DOM', 'DOM.Iterable'],
+  const config = deepExtend(
+    {
+      compilerOptions: {
+        baseUrl: '.',
+        declaration: true,
+        diagnostics: true,
+        esModuleInterop: true,
+        forceConsistentCasingInFileNames: true,
+        incremental: true,
+        module: 'commonjs',
+        moduleResolution: 'node',
+        noImplicitAny: true,
+        noUnusedLocals: false,
+        noUnusedParameters: false,
+        outDir: DIST_PATH,
+        paths,
+        removeComments: true,
+        resolveJsonModule: true,
+        sourceMap: true,
+        strict: false, // we should turn this on when data is ready :/
+        target: 'es2018',
+        lib: ['es2019', 'DOM', 'DOM.Iterable'],
+      },
+      include: [`${SRC_PATH}/**/*`],
     },
-    include: [`${SRC_PATH}/**/*`],
-  }, userConfig.tsconfig)
+    userConfig.tsconfig,
+  )
 
   const configString = JSON.stringify(config, null, 2)
 

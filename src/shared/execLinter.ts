@@ -2,7 +2,10 @@ import { SRC_PATH } from '../shared/constants'
 import exec from '../shared/exec'
 import { log, fmt } from '../shared/log'
 
-const execLinter = async (linterPath: string, args: string[]) => {
+const execLinter = async (
+  linterPath: string,
+  args: string[],
+): Promise<void> => {
   log(fmt`Running ${'eslint'} ${args}`)
 
   const options = args.filter((input) => input.startsWith('--'))

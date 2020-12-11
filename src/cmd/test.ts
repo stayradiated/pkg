@@ -7,7 +7,7 @@ import { log, fmt } from '../shared/log'
 const AVA_TSC_PATH = require.resolve('../shim/ava-tsc')
 const AVA_PLAIN_PATH = require.resolve('../shim/ava-plain')
 
-const test = async () => {
+const test = async (): Promise<void> => {
   let avaPath = AVA_TSC_PATH
 
   const args = process.argv.slice(2)

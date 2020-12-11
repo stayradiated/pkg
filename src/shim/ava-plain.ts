@@ -10,7 +10,7 @@ const start = async () => {
   const filepath = readPkgUp.sync().path
 
   mockWithContext('pkg-conf', require.resolve('ava/cli'), () => ({
-    sync: (pkgName: string, opts: object) => {
+    sync: (pkgName: string, opts: Record<string, unknown>) => {
       if (pkgName === 'ava') {
         return config
       }

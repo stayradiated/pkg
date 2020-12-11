@@ -1,9 +1,14 @@
 import mockTSConfig from './mock-tsconfig'
 import { TESTS_NAME } from '../shared/constants'
 
-const typedoc = (srcDir: string, outDir: string, externalPattern: string[]) => {
+const typedoc = (
+  srcDir: string,
+  outDir: string,
+  externalPattern: string[],
+): void => {
   mockTSConfig('typedoc')
 
+  // eslint-disable-next-line @typescript-eslint/no-var-requires
   const TypeDoc = require('typedoc')
   const app = new TypeDoc.Application()
 

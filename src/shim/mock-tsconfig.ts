@@ -11,7 +11,7 @@ const MOCK_FILE = {
   isDirectory: () => false,
 }
 
-const mockTSConfig = (packageName: string) => {
+const mockTSConfig = (packageName: string): void => {
   mockWithContext('fs', require.resolve(packageName), (fs) => ({
     ...fs,
     existsSync: (path: string) => {
@@ -20,13 +20,13 @@ const mockTSConfig = (packageName: string) => {
       }
       return fs.existsSync(path)
     },
-    statSync: (path: string, options: object) => {
+    statSync: (path: string, options: Record<string, unknown>) => {
       if (path === TSCONFIG_PATH) {
         return MOCK_FILE
       }
       return fs.statSync(path, options)
     },
-    readFileSync: (path: string, options: object) => {
+    readFileSync: (path: string, options: Record<string, unknown>) => {
       if (path === TSCONFIG_PATH) {
         const configString = createTSConfig()
         const configBuffer = Buffer.from(configString, 'utf8')

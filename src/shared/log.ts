@@ -2,12 +2,12 @@ import chalk from 'chalk'
 
 import { SRC_PATH, DIST_PATH } from './constants'
 
-const log = (...args: string[]) => console.log(...args)
+const log = (...args: string[]): void => console.log(...args)
 
 const fmt = (
   strings: TemplateStringsArray,
   ...values: (string | string[])[]
-) => {
+): string => {
   const message = strings.reduce((total, current, index) => {
     total += current
     if (Object.hasOwnProperty.call(values, index)) {

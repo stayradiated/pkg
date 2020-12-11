@@ -8,7 +8,7 @@ import config from '../config/prettier'
 const PRETTIER_PATH = require.resolve('prettier/bin-prettier')
 const LINTER_PATH = require.resolve('../shim/eslint-tsc')
 
-const prettier = async () => {
+const prettier = async (): Promise<void> => {
   const args = process.argv.slice(2)
   log(fmt`Running ${'prettier'} ${args}`)
 

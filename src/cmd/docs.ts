@@ -3,7 +3,7 @@ import { log, fmt } from '../shared/log'
 
 import typedoc from '../shim/typedoc'
 
-const build = async () => {
+const build = async (): Promise<void> => {
   log(fmt`Building docs from ${SRC_PATH} to ${DOCS_PATH} directory`)
 
   log(fmt`Running ${'typedoc'}`)

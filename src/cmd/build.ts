@@ -4,7 +4,7 @@ import exec from '../shared/exec'
 
 const TSC_SHIM_PATH = require.resolve('../shim/tsc')
 
-const build = async () => {
+const build = async (): Promise<void> => {
   log(fmt`Building from ${SRC_PATH} to ${DIST_PATH} directory`)
 
   const args = process.argv.slice(2)
