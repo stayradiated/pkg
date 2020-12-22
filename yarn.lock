@@ -928,10 +928,10 @@ escape-string-regexp@^4.0.0:
   resolved "https://registry.yarnpkg.com/escape-string-regexp/-/escape-string-regexp-4.0.0.tgz#14ba83a5d373e3d311e5afca29cf5bfad965bf34"
   integrity sha512-TtpcNJ3XAzx3Gq8sWRzJaVajRs0uVxA2YAkdb1jm2YkPz4G6egUFAyA3n5vtEIZefPk5Wa4UXbKuS5fKkJWdgA==
 
-eslint-config-stayradiated@3.4.0:
-  version "3.4.0"
-  resolved "https://registry.yarnpkg.com/eslint-config-stayradiated/-/eslint-config-stayradiated-3.4.0.tgz#a3a504761097a4b5e76d87181e6da181ceace9cc"
-  integrity sha512-wqE8UOc3k15EAMix3VWyB+Jn0PzCcS2IoHnTfikHLFllYmJCDcUyah9+8hnRVOYXkKOPQKgW7PKqjb3Lc5GnKQ==
+eslint-config-stayradiated@3.5.0:
+  version "3.5.0"
+  resolved "https://registry.yarnpkg.com/eslint-config-stayradiated/-/eslint-config-stayradiated-3.5.0.tgz#6c887912b11bfd5c3e719d865a22485143e59279"
+  integrity sha512-aCIllTDr/Be8IPQ9U/xuUK+EU8XIm7mZr6RtPaGE/w5V3bcyG6bBvjQqxQhVphhX4oAH9VZHKLVMmMOMPS6zmQ==
   dependencies:
     "@typescript-eslint/eslint-plugin" "4.11.0"
     "@typescript-eslint/parser" "4.11.0"
