@@ -4,11 +4,12 @@ import withTestHelpers from '../shared/withTestHelpers'
 import exec from '../shared/exec'
 import { log, fmt } from '../shared/log'
 
-const AVA_TSC_PATH = require.resolve('../shim/ava-tsc')
+// TODO(GC): get ava working with ts-node again
+// const AVA_TSC_PATH = require.resolve('../shim/ava-tsc')
 const AVA_PLAIN_PATH = require.resolve('../shim/ava-plain')
 
 const test = async (): Promise<void> => {
-  let avaPath = AVA_TSC_PATH
+  const avaPath = AVA_PLAIN_PATH
 
   const args = process.argv.slice(2)
 
@@ -21,7 +22,6 @@ const test = async (): Promise<void> => {
     if (shouldBuild) {
       await build()
     }
-    avaPath = AVA_PLAIN_PATH
   }
 
   await withTestHelpers(async () => {

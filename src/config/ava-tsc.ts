@@ -6,7 +6,6 @@ import { SRC_PATH, TESTS_NAME, DIST_PATH } from '../shared/constants'
 type Config = {
   verbose: boolean,
   require: string[],
-  compileEnhancements: boolean,
   extensions: string[],
   files: string[],
 }
@@ -20,7 +19,6 @@ const getConfig = async (): Promise<Config> => {
   return {
     verbose: true,
     require: [TS_NODE_PATH],
-    compileEnhancements: false,
     extensions: ['ts'],
     files: [...relativeFiles, `!${DIST_PATH}/`],
   }

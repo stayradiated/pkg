@@ -52,7 +52,7 @@
   "devDependencies": {
     "@types/deep-extend": "0.4.31",
     "@types/mkdirp": "1.0.1",
-    "@types/node": "14.14.14",
+    "@types/node": "14.14.16",
     "@types/pkg-conf": "3.0.0",
     "@types/read-pkg-up": "6.0.0"
   }
