@@ -1,6 +1,6 @@
 import globby from 'globby'
 import { join } from 'path'
-import pkgConf from 'pkg-conf'
+import * as pkgConf from 'pkg-conf'
 import deepExtend from 'deep-extend'
 
 import { SRC_PATH, DIST_PATH } from '../shared/constants'
